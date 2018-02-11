@@ -11,17 +11,29 @@ export class AppComponent {
   public name3: any = [1, 2, 3]; // must be array
   public nameList: Array<string> = []; // array contain string value
   public nameList2: Array<number> = []; // array contain number value
+  public myData: Array<string> = ['daliya', 'seeniya', 'viji'];
+  public myData1: Array<string> = ['daliya1', 'seeniya2', 'viji3'];
 
   title = 'app';
+
   constructor() {
     enum color {daliya, seeniya, viji} //  constant value , default value should be 0, 1 , 2 etc
     console.log(color.daliya);
+
+    // arrow function
+    let data =  this.myData.map( value => value.length + 1); // arrow function
+    console.log(data);
+
+    let list = this.myData1.map((values) => {
+      return values;
+    });
+    console.log(list);
   }
 
   myFunction() {
     const age = 6;
     for (let i = 0; i < 4; i++) {
-      let daliya = 1;
+      const daliya = 1;
       console.log(i); // actual result
     }
     console.log('value of daliya', daliya);
