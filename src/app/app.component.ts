@@ -8,9 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   constructor() {
+  }
+
+  myFunction() {
     for (let i = 0; i < 4; i++) {
+      let daliya = 1;
       console.log(i); // actual result
     }
-    console.log('hai', i); // let scope inside block  of function
+    console.log('value of daliya', daliya);
+    console.log('hh', i); // actual result
+
+    for (var j = 0; j < 4; j++) {
+      var daliya = 'john';
+      console.log(j); // actual result
+    }
+    console.log(daliya);
   }
 }
