@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
 
+interface Address {
+  address1: 7;
+  address2:  9;
+// tslint:disable-next-line:semicolon
+};
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
   public name; // type must be any
   public name1: number; // type must be number
@@ -16,7 +23,8 @@ export class AppComponent {
 
   title = 'app';
 
-  constructor() {
+
+  constructor(public address: Address) {
     enum color {daliya, seeniya, viji} //  constant value , default value should be 0, 1 , 2 etc
     console.log(color.daliya);
 
@@ -28,6 +36,13 @@ export class AppComponent {
       return values;
     });
     console.log(list);
+
+    console.log(address.address1);
+    let das = Object.create({
+      'name' : 'daliya',
+      'age': 4
+    });
+    console.log(das);
   }
 
   myFunction() {
@@ -45,4 +60,5 @@ export class AppComponent {
     }
     console.log(daliya);
   }
+
 }
