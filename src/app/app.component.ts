@@ -24,7 +24,7 @@ export class AppComponent {
   title = 'app';
 
 
-  constructor(public address: Address) {
+  constructor() {
     enum color {daliya, seeniya, viji} //  constant value , default value should be 0, 1 , 2 etc
     console.log(color.daliya);
 
@@ -37,7 +37,6 @@ export class AppComponent {
     });
     console.log(list);
 
-    console.log(address.address1);
     let das = Object.create({
       'name' : 'daliya',
       'age': 4
@@ -52,7 +51,6 @@ export class AppComponent {
       console.log(i); // actual result
     }
     console.log('value of daliya', daliya);
-    console.log('hh', i); // actual result
 
     for (var j = 0; j < 4; j++) {
       var daliya = 'john';
