@@ -1,0 +1,13 @@
+.image-style {
+    text-align: center;
+}
+.image-style img {
+    width: 50%;
+}
+.thump {
+    width: 50%;
+    margin: 0 auto;
+}
+.fa-thumbs-up {
+    font-size: 18px;
+}
