@@ -11,3 +11,7 @@
 .fa-thumbs-up {
     font-size: 18px;
 }
+button {
+    background: transparent;
+    border: none;
+}
