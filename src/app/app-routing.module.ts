@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Section1Component } from './section1/section1.component';
+import { AuthorComponent } from './author/author.component';
 
 const appRoutes: Routes = [
   {
     path: 'section',
     component: AppComponent,
+  },
+  {
+    path: 'author',
+    component: AuthorComponent,
   },
   {
     path: '',
