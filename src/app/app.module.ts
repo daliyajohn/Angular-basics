@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { Section1Component } from './section1/section1.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthorComponent } from './author/author.component';
+import { AuthorService } from './author/author.service';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { AuthorComponent } from './author/author.component';
     AppRoutingModule,
     RouterModule
   ],
-  providers: [],
+  providers: [AuthorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
