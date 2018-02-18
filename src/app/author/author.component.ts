@@ -7,10 +7,13 @@ import { AuthorService } from './author.service';
   styleUrls: ['./author.component.css']
 })
 export class AuthorComponent implements OnInit {
+  courses: Array<any> = [];
 
-  constructor() { }
+  constructor( public authorService: AuthorService) {
+    this.courses = this.authorService.getAuthor();
+    console.log(this.courses);
+   }
 
   ngOnInit() {
   }
-
 }
