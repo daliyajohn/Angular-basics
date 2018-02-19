@@ -9,15 +9,18 @@ export class AuthorService {
     return [
       {
         id : 1,
-        name : 'daliya'
+        name : 'daliya',
+        address: 'pk nagar'
       },
       {
         id : 2,
-        name : 'seeniya'
+        name : 'seeniya',
+        address: 'pk nagar ikl'
       },
       {
         id : 3,
-        name : 'viji'
+        name : 'viji',
+        address: 'pk nagar hjy'
       },
     ];
   }
