@@ -8,6 +8,7 @@ import { AuthorService } from './author.service';
 })
 export class AuthorComponent implements OnInit {
   courses: Array<any> = [];
+  isActive: Boolean = true;
 
   constructor( public authorService: AuthorService) {
     this.courses = this.authorService.getAuthor();
