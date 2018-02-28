@@ -8,13 +8,15 @@ import { Section1Component } from './section1/section1.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthorComponent } from './author/author.component';
 import { AuthorService } from './author/author.service';
+import { SamplePipe } from './author/author.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     Section1Component,
-    AuthorComponent
+    AuthorComponent,
+    SamplePipe
   ],
   imports: [
     BrowserModule,
