@@ -9,9 +9,11 @@ import { AuthorService } from './author.service';
 export class AuthorComponent implements OnInit {
   courses: Array<any> = [];
   isActive: Boolean = true;
+  name: String;
 
   constructor( public authorService: AuthorService) {
     this.courses = this.authorService.getAuthor();
+    this.name = 'daliya';
     console.log(this.courses);
    }
 
