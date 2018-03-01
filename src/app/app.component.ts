@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 interface Address {
   address1: 7;
@@ -23,7 +23,7 @@ export class AppComponent {
 
   title = 'app';
 
-
+@Output() names = new EventEmitter;
   constructor() {
     enum color {daliya, seeniya, viji} //  constant value , default value should be 0, 1 , 2 etc
     console.log(color.daliya);
@@ -57,6 +57,10 @@ export class AppComponent {
       console.log(j); // actual result
     }
     console.log(daliya);
+  }
+
+  getData(value) {
+    console.log('value', value);
   }
 
 }
