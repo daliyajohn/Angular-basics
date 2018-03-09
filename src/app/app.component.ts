@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 interface Address {
   address1: 7;
@@ -20,13 +20,18 @@ export class AppComponent {
   public nameList2: Array<number> = []; // array contain number value
   public myData: Array<string> = ['daliya', 'seeniya', 'viji'];
   public myData1: Array<string> = ['daliya1', 'seeniya2', 'viji3'];
+  public countData: Number = 12;
+
+  @Input() countEmit = new EventEmitter();
 
   title = 'app';
 
-@Output() names = new EventEmitter;
+  @Output() names = new EventEmitter;
   constructor() {
     enum color {daliya, seeniya, viji} //  constant value , default value should be 0, 1 , 2 etc
     console.log(color.daliya);
+
+    this.countEmit.emit(this.countData);
 
     // arrow function
     let data =  this.myData.map( value => value.length + 1); // arrow function
@@ -52,8 +57,8 @@ export class AppComponent {
     }
     console.log('value of daliya', daliya);
 
-    for (var j = 0; j < 4; j++) {
-      var daliya = 'john';
+    for (let j = 0; j < 4; j++) {
+      let daliya = 'john';
       console.log(j); // actual result
     }
     console.log(daliya);
