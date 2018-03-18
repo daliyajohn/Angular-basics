@@ -52,13 +52,13 @@ export class AppComponent {
       const daliya = 1;
       console.log(i); // actual result
     }
-    console.log('value of daliya', daliya);
+    // console.log('value of daliya', daliya);
 
     for (let j = 0; j < 4; j++) {
-      let daliya = 'john';
+      const daliya = 'john';
       console.log(j); // actual result
     }
-    console.log(daliya);
+    // console.log(daliya);
   }
 
   getData(value) {

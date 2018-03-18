@@ -13,12 +13,12 @@ export class Section1Component implements OnInit {
 
   ngOnInit() {}
 
-  thumpChange(data) {
+  thumpChange() {
     this.isSelected = !this.isSelected;
     if (this.isSelected) {
-      data++;
+      this.like++;
     } else {
-      data--;
+      this.like--;
     }
   }
 }

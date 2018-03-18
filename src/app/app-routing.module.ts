@@ -3,26 +3,29 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Section1Component } from './section1/section1.component';
 import { AuthorComponent } from './author/author.component';
+import { FormComponent } from './form/form.component';
 
 const appRoutes: Routes = [
   {
     path: 'section',
-    component: AppComponent,
+    component: AppComponent
   },
   {
     path: 'author',
-    component: AuthorComponent,
+    component: AuthorComponent
   },
   {
     path: '',
-    component: Section1Component,
+    component: Section1Component
+  },
+  {
+    path: 'form',
+    component: FormComponent
   }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes)
-  ],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

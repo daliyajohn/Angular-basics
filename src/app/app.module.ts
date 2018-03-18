@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthorComponent } from './author/author.component';
 import { AuthorService } from './author/author.service';
 import { SamplePipe } from './author/author.pipe';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SamplePipe } from './author/author.pipe';
     AppComponent,
     Section1Component,
     AuthorComponent,
-    SamplePipe
+    SamplePipe,
+    FormComponent
   ],
   imports: [
     BrowserModule,
