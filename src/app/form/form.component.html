@@ -1,3 +1,11 @@
-<p>
-  form works
-</p>
+<form #form="ngForm" (ngSubmit)="submit(form.value)">
+  <input type="text" [(ngModel)]="firstName" name="firstname" #firstname required>
+  <div *ngIf="firstname.errors?.required">hjliuilul</div>
+  <br>
+  <br>
+  <input type="text" [(ngModel)]="lastName" name="lastname" #lastname>
+  <div *ngIf="lastname.touch  && lastname.valid">hjliuilul</div>
+  <br>
+  <br>
+  <button type="submit" [disabled]="!form.valid">Submit</button>
+</form>
