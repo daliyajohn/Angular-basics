@@ -2,16 +2,14 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 interface Address {
   address1: 7;
-  address2:  9;
-// tslint:disable-next-line:semicolon
-};
+  address2: 9;
+  // tslint:disable-next-line:semicolon
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
-
 export class AppComponent {
   public name; // type must be any
   public name1: number; // type must be number
@@ -22,29 +20,28 @@ export class AppComponent {
   public myData1: Array<string> = ['daliya1', 'seeniya2', 'viji3'];
   public countData: Number = 12;
 
-  @Input() countEmit = new EventEmitter();
-
   title = 'app';
 
-  @Output() names = new EventEmitter;
   constructor() {
-    enum color {daliya, seeniya, viji} //  constant value , default value should be 0, 1 , 2 etc
+    enum color {
+      daliya,
+      seeniya,
+      viji
+    } //  constant value , default value should be 0, 1 , 2 etc
     console.log(color.daliya);
 
-    this.countEmit.emit(this.countData);
-
     // arrow function
-    let data =  this.myData.map( value => value.length + 1); // arrow function
+    let data = this.myData.map(value => value.length + 1); // arrow function
     console.log(data);
 
-    let list = this.myData1.map((values) => {
+    let list = this.myData1.map(values => {
       return values;
     });
     console.log(list);
 
     let das = Object.create({
-      'name' : 'daliya',
-      'age': 4
+      name: 'daliya',
+      age: 4
     });
     console.log(das);
   }
@@ -67,5 +64,4 @@ export class AppComponent {
   getData(value) {
     console.log('value', value);
   }
-
 }

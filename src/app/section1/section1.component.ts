@@ -9,10 +9,9 @@ export class Section1Component implements OnInit {
   public isSelected: Boolean = false;
   public like: any = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   thumpChange(data) {
     this.isSelected = !this.isSelected;

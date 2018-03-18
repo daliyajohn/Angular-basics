@@ -10,17 +10,13 @@ export class AuthorComponent implements OnInit {
   courses: Array<any> = [];
   isActive: Boolean = true;
   name: String;
-  @Output() nameList = new EventEmitter();
 
-  constructor( public authorService: AuthorService) {
+  constructor(public authorService: AuthorService) {
     this.courses = this.authorService.getAuthor();
     this.name = 'daliya john, kollam';
-    console.log(this.nameList);
-    this.nameList.emit( this.name);
-   }
-
-  ngOnInit() {
   }
+
+  ngOnInit() {}
   onSubmit() {
     alert('das');
   }
